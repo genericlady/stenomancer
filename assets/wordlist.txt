@@ -1,0 +1,41 @@
+Word List
+
+Player starts out with:
+
+is (S-)
+with (W-)
+he (-E)
+
+Acquires in order:
+
+it (T-)
+had (H-)
+. (P-)
+
+in (TPH-) (N-)
+to (O-)
+you (-U)
+
+can (K-)
+are (R-)
+
+if (TP-) (F-)
+did (TK-) (D-)
+go (TKPW-) (G-)
+about (PW-) (B-)
+will (HR-) (L-)
+why (KWR-) (Y-)
+
+of (-F)
+be (-B)
+the (-T)
+are (-R)
+
+? (H-F)
+, (KW-BG)
+
+a- (A-)
+-ly (-L)
+-ed (-D)
+-s (-S)
+-s (-Z)
