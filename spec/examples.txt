@@ -1,0 +1,6 @@
+example_id                                   | status | run_time        |
+-------------------------------------------- | ------ | --------------- |
+./spec/lib/abilities/drawable_spec.rb[1:1]   | passed | 0.00105 seconds |
+./spec/lib/abilities/drawable_spec.rb[1:2:1] | passed | 0.00158 seconds |
+./spec/lib/actor_spec.rb[1:1:1]              | passed | 0.00075 seconds |
+./spec/lib/actor_spec.rb[1:2]                | passed | 0.23044 seconds |
