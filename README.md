@@ -25,3 +25,6 @@ Battle view:
 Battle view will require the player to type quickly and accurately enough to defeat the character's minions, represented by keys, chords, or words that advance steadily towards the player's sprite. When the player has defeated the minions, they will receive a new Keyboard Artifact key that will allow them to complete the dialogue. Successfully completing a dialogue will cause the character to move aside, opening up new areas of the map.  
 
 When the player has collected all of the Keyboard Artifact keys and has filled in the entire steno keyboard, they win the game!
+
+## License
+[GPL2][https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html]
