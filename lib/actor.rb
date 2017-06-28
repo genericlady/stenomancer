@@ -1,7 +1,7 @@
 class Actor
   attr_accessor :current_image, :x, :y, :z, :scale_x, :scale_y, :color, :mode, 
                 :velocity_y, :velocity_x
-  attr_reader :role, :position
+  attr_reader :role, :position, :keypress
 
   include Abilities::Drawable
 
@@ -15,6 +15,7 @@ class Actor
     @mode = :default
 
     set_position
+    @keypress = Keypress.new
 
     @velocity_x = 5
     @velocity_y = 5
@@ -33,8 +34,11 @@ class Actor
     current_image.height
   end
 
-  def update(&block)
-    yield(self)
+  def update
+    move_north if keypress.north?
+    move_east if keypress.east?
+    move_south if keypress.south?
+    move_west if keypress.west?
   end
 
   def x
@@ -55,6 +59,30 @@ class Actor
 
   def z
     position.z
+  end
+
+  def move_north
+    unless position.northern_screen_edge?(self)
+      position.y -= velocity_y
+    end
+  end
+
+  def move_east
+    unless position.eastern_screen_edge?(self)
+      position.x += velocity_x
+    end
+  end
+
+  def move_south
+    unless position.southern_screen_edge?(self)
+      position.y += velocity_y
+    end
+  end
+
+  def move_west
+    unless position.western_screen_edge?(self)
+      position.x -= velocity_x
+    end
   end
 
   private

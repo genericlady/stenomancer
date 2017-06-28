@@ -3,6 +3,10 @@ require "spec_helper"
 RSpec.describe Position do
   let(:position) { Position.new }
 
+  it "Is updateable" do
+    expect(position).to respond_to(:update)
+  end
+
   context "A position is meant to maintain an x, y coordinate that are to be 
     used with cartesian coordinates." do
     it "Has attributes for x, y and z" do
