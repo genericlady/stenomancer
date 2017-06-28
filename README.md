@@ -27,4 +27,4 @@ Battle view will require the player to type quickly and accurately enough to def
 When the player has collected all of the Keyboard Artifact keys and has filled in the entire steno keyboard, they win the game!
 
 ## License
-[GPL2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+[GPL2](LICENSE.md)
