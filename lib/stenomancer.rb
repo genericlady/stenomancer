@@ -1,8 +1,9 @@
 class Stenomancer < Gosu::Window
   def initialize
     @actor = Actor.new
-    @main_window = Window::Main.new(@actor)
-    @hud = Hud.new(@main_window)
+    @hud = Hud.new(@main_window, "media/dark_felt.png")
+    @window_observers = [actor, hud]
+    @main_window = Window::Main.new(window_observers)
   end
 
   def run
@@ -11,6 +12,6 @@ class Stenomancer < Gosu::Window
   end
 
   private
-  attr_reader :actor, :main_window, :hud
+  attr_reader :actor, :main_window, :hud, :window_observers
 
 end
