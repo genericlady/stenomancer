@@ -1,6 +1,5 @@
 class Actor
-  attr_accessor :current_image, :x, :y, :z, :scale_x, :scale_y, :color, :mode, 
-                :velocity_y, :velocity_x
+  attr_accessor :image, :velocity_y, :velocity_x
   attr_reader :role, :position, :keypress
 
   include Abilities::Drawable
@@ -8,11 +7,7 @@ class Actor
   def initialize(role: "player")
     @role = role
 
-    @current_image = Gosu::Image.new("media/stick_figure.png")
-    @scale_x = 1
-    @scale_y = 1
-    @color = 0xff_ffffff
-    @mode = :default
+    @image = Image.new("media/stick_figure.png")
 
     set_position
     @keypress = Keypress.new
@@ -22,16 +17,15 @@ class Actor
   end
 
   def draw
-    current_image.
-      draw(x - current_image.width / 2, y - current_image.height / 2, z, scale_x, scale_y, color, mode)
+    image.draw(x, y, z)
   end
 
   def width
-    current_image.width
+    image.width
   end
 
   def height
-    current_image.height
+    image.height
   end
 
   def update
