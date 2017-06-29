@@ -1,25 +1,16 @@
 class Stenomancer < Gosu::Window
   def initialize
-    # you can optionally set fullscreen
-    # super(800, 600, :fullscreen => true)
-    super 2400, 1800
-
-    self.caption = "Stenomancer"
-
-    @background_image = Gosu::Image.new("media/stone_floor.png", :tileable => true)
     @actor = Actor.new
+    @main_window = Window::Main.new(@actor)
+    @hud = Hud.new(@main_window)
   end
 
-  def update
-    actor.update
-  end
-
-  def draw
-    @background_image.draw(0, 0, 0)
-    actor.draw
+  def run
+    main_window.show
+    hud.show
   end
 
   private
-  attr_reader :actor
+  attr_reader :actor, :main_window, :hud
 
 end
